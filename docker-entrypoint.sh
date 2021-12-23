@@ -47,6 +47,14 @@ if [[ -n "${log_level}" ]]; then
   lucky configure --log-level "${log_level}"
 fi
 
+if [[ -n "${peer_count}" ]]; then
+  lucky configure --set-peer-count "${peer_count}"
+fi
+
+if [[ -n "${outbound_peer_count}" ]]; then
+  lucky configure --set_outbound-peer-count "${outbound_peer_count}"
+fi
+
 sed -i 's/localhost/127.0.0.1/g' "$CONFIG_ROOT/config/config.yaml"
 
 exec "$@"
