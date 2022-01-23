@@ -34,7 +34,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # environment variables
 ENV \
-        CHIA_ROOT=/root/.chia/mainnet \
+        CHIA_ROOT=/root/.lucky/mainnet \
         farmer_address= \
         farmer_port= \
         keys="generate" \
